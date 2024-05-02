@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+         <div>
+            <h1>
+                Celsius to Farenheit
+            </h1>
+          </div>
+         <div>
+            <input type="text" id="cel" placeholder="Enter the Celsius"/>
+         </div>
+         <div class="submit">
+            <button  id="submit" onclick="check()">Convert to Farenheit</button>
+         </div>
+         <div id="result">
+
+          </div>
+    </div>
+    <script>
+        function check(){
+       const value= Number(document.getElementById("cel").value);
+       const farenheit=(value*(9/5))+32;
+        const result=document.getElementById("result");
+        result.innerHTML=farenheit.toFixed(2) +"  Farenheit";
+        }
+    </script>
+</body>
+</html>
